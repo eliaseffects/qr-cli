@@ -45,6 +45,8 @@ brews:
     repository:
       owner: eliaseffects
       name: homebrew-tap
+    token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    folder: Formula
     homepage: "https://github.com/eliaseffects/qr-cli"
     description: "Generate QR codes from the terminal"
     license: "MIT"
