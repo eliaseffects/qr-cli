@@ -1,0 +1,65 @@
+project_name: qr-cli
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - main: .
+    binary: qr
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+archives:
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^ci:"
+
+brews:
+  - name: qr-cli
+    repository:
+      owner: eliaseffects
+      name: homebrew-tap
+    homepage: "https://github.com/eliaseffects/qr-cli"
+    description: "Generate QR codes from the terminal"
+    license: "MIT"
+    install: |
+      bin.install "qr"
+    test: |
+      system "#{bin}/qr", "--version"
+
+nfpms:
+  - package_name: qr-cli
+    vendor: Elias Stevenson
+    homepage: "https://github.com/eliaseffects/qr-cli"
+    maintainer: "Elias Stevenson <elias@realityshifting.tech>"
+    description: "Generate QR codes from the terminal"
+    license: MIT
+    formats:
+      - deb
+      - rpm

@@ -1,0 +1,20 @@
+# Go build
+/bin/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test outputs
+*.test
+*.out
+
+# OS files
+.DS_Store
+
+# Generated QR outputs
+qr.png
+qr.svg
+qr-output/
