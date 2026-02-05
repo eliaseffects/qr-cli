@@ -3,7 +3,7 @@
 Thanks for helping improve qr-cli.
 
 ## Development
-- Requires Go 1.22+
+- Requires Go 1.24+
 - Run tests with `go test ./...`
 
 ## Guidelines

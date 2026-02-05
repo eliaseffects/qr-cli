@@ -1,6 +1,6 @@
 module github.com/eliaseffects/qr-cli
 
-go 1.22
+go 1.24
 
 require (
 	github.com/liyue201/goqr v0.0.0-20200803022322-df443203d4ea

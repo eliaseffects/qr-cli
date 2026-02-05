@@ -1,7 +1,7 @@
 # qr-cli
 
 [![CI](https://github.com/eliaseffects/qr-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/eliaseffects/qr-cli/actions/workflows/ci.yml)
-[![Go](https://img.shields.io/badge/go-1.22%2B-00ADD8?logo=go&logoColor=white)](https://go.dev/)
+[![Go](https://img.shields.io/badge/go-1.24%2B-00ADD8?logo=go&logoColor=white)](https://go.dev/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Generate QR codes from the terminal. Fast, minimal, and easy to script.
@@ -166,7 +166,7 @@ export QR_WIFI_SSID="MyNetwork"
 Completion scripts are in `scripts/completions/`.
 
 ## Development
-- Requires Go 1.22+
+- Requires Go 1.24+
 - Run tests: `go test ./...`
 - Format: `gofmt -w ./...`
 
