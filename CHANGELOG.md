@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.3 - 2026-02-05
+- Fix release workflow token for Homebrew tap publishing
+
 ## 0.1.2 - 2026-02-05
 - Fix Homebrew tap publishing configuration
 
